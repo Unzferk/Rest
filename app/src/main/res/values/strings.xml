@@ -1,0 +1,17 @@
+<resources>
+    <string name="empty"></string>
+    <string name="app_name">Rest</string>
+    <string name="btn_menu">MENU</string>
+    <string name="btn_order">ORDER</string>
+    <string name="btn_option">OPTIONS</string>
+    <string name="add_plate"></string>
+
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
+
+
+    <string name="okay_dish"></string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_order_list">OrderList</string>
+</resources>

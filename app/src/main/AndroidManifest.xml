@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Order"></activity>
         <activity
-            android:name=".OrderList"
+            android:name=".OrderQueue"
             android:label="@string/title_activity_order_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".AddDish" />

@@ -27,6 +27,7 @@
             android:id="@+id/btn_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="orderQueue"
             android:text="@string/btn_order" />
 
         <Button

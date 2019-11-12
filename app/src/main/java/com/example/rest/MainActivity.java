@@ -23,5 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent menu=new Intent(this,Menu.class);
         startActivity(menu);
     }
+    public void orderQueue(View view){
+        Intent orderQueue=new Intent(this,OrderQueue.class);
+        startActivity(orderQueue);
+    }
 }
 

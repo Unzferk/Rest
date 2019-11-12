@@ -1,7 +1,6 @@
 package com.example.rest;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +16,7 @@ public class AddDish extends AppCompatActivity {
     EditText name,price,desc;
     Button create;
     DatabaseReference databaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,6 @@ public class AddDish extends AppCompatActivity {
             databaseReference.child("food").child(name.getText().toString()).setValue(food);
             Toast.makeText(AddDish.this,"data Inserted",Toast.LENGTH_SHORT).show();
         }
-
         return true;
     }
 

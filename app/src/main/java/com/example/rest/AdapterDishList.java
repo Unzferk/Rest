@@ -50,7 +50,7 @@ public class AdapterDishList extends RecyclerView.Adapter<AdapterDishList.DishLi
 
         public DishListViewHolder(@NonNull View itemView) {
             super(itemView);
-            dishName=itemView.findViewById(R.id.dishNameMenuRow);
+            dishName=itemView.findViewById(R.id.dishNameOrderRow);
 
         }
         void bind(){

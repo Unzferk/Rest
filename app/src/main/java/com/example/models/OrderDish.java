@@ -39,4 +39,8 @@ public class OrderDish implements Serializable {
     public void setAmount(int amount) {
         this.amount = amount;
     }
+
+    public int getSubTotal(){
+        return price*amount;
+    }
 }

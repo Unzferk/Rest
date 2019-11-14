@@ -53,8 +53,5 @@ public class AdapterDishList extends RecyclerView.Adapter<AdapterDishList.DishLi
             dishName=itemView.findViewById(R.id.dishNameOrderRow);
 
         }
-        void bind(){
-            //se encarga de encajar el diseño de la fila en cada fila
-        }
     }
 }

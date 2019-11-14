@@ -9,9 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.models.Food;
+import com.example.models.OrderDish;
+import com.example.models.OrderM;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,9 +27,11 @@ import java.util.List;
 public class Order extends AppCompatActivity {
 
     //Attributes
+    EditText nroTable;
 
     RecyclerView rv_OrderList;
     List<Food> foods;
+    List<OrderDish> selectedDishes;
     AdapterOrderList adapter;
 
     @Override
@@ -40,12 +45,12 @@ public class Order extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         rv_OrderList.setLayoutManager(linearLayoutManager);
 
-
         //loadData
         foods=new ArrayList<>();
-        adapter=new AdapterOrderList(foods);
+        selectedDishes=new ArrayList<>();
+            //selected dishes
+            adapter=new AdapterOrderList(foods,selectedDishes);
         rv_OrderList.setAdapter(adapter);
-
 
         FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
 
@@ -65,8 +70,6 @@ public class Order extends AppCompatActivity {
 
             }
         });
-
-
     }
 
     //adding Toolbar
@@ -75,15 +78,22 @@ public class Order extends AppCompatActivity {
         return true;
     }
 
-
     public boolean onOptionsItemSelected(MenuItem item){
 
         int id=item.getItemId();
         if(id==R.id.btn_okay){
+            nroTable=(EditText) findViewById(R.id.input_noTable);
 
-            Toast.makeText(Order.this,"data Inserted",Toast.LENGTH_SHORT).show();
+            String aux= nroTable.getText().toString();
+            int nro=Integer.parseInt(aux);
+
+            OrderM ord=new OrderM(nro,selectedDishes);
+            DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference();
+            databaseReference.child("order").push().setValue(ord);
+
+
+            Toast.makeText(Order.this,"Order created!!",Toast.LENGTH_SHORT).show();
         }
         return true;
     }
-
 }

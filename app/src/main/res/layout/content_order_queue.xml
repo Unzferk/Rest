@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".OrderQueue"
-    tools:showIn="@layout/activity_order_list">
+    tools:showIn="@layout/activity_order_queue">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

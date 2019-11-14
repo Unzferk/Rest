@@ -6,6 +6,8 @@
     <string name="btn_option">OPTIONS</string>
     <string name="add_plate"></string>
 
+    <string name="nroMesa">MN</string>
+    <string name="number">66</string>
     <string name="name">Name</string>
     <string name="price">Price</string>
     <string name="description">Description</string>
@@ -15,4 +17,6 @@
     <string name="okay_dish"></string>
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_order_list">OrderList</string>
+
+
 </resources>

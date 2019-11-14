@@ -11,15 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.models.Food;
+import com.example.models.OrderDish;
 
 import java.util.List;
 
 public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.OrderListViewHolder>{
 
     List<Food> foods;
+    List<OrderDish> dishes;
 
-    public AdapterOrderList(List<Food> foods) {
+    public AdapterOrderList(List<Food> foods,List<OrderDish> dishes){
         this.foods = foods;
+        this.dishes = dishes;
     }
 
     @NonNull
@@ -33,17 +36,32 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
 
     @Override
     public void onBindViewHolder(@NonNull final OrderListViewHolder holder, int position) {
-        Food food=foods.get(position);
+        final Food food=foods.get(position);
         holder.dishName.setText(food.getName());
         String auxPrice=food.getPrice()+"";
         holder.dishPrice.setText(auxPrice);
         holder.flag.setChecked(false);
 
+
+
         holder.flag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //fuck logic here
-                holder.flag.setChecked(true);
+                if(((CheckBox) v).isChecked()){
+                    //cantidad de platos, revisar... deberia ser minimo 1
+                    int amon=Integer.parseInt(holder.amount.getText().toString());
+                    OrderDish aux=new OrderDish(food.getName(),food.getPrice(),amon);
+                    dishes.add(aux);
+                    System.out.println("Plato añadido :V");
+                }else {
+                    for(int i=0;i<dishes.size();i++){
+                        if(dishes.get(i).getName().equals(food.getName())){
+                            dishes.remove(i);
+                            System.out.println("plato removido");
+                        }
+                    }
+                }
+
             }
         });
 
@@ -60,9 +78,11 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
         TextView dishName,dishPrice;
         CheckBox flag;
         EditText amount;
+        EditText nroTable;
 
         public OrderListViewHolder(@NonNull View itemView) {
             super(itemView);
+            nroTable=itemView.findViewById(R.id.input_noTable);
             dishName=itemView.findViewById(R.id.dishNameOrderRow);
             dishPrice=itemView.findViewById(R.id.dishPriceOrderRow);
             flag=itemView.findViewById(R.id.check_add);

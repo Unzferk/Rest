@@ -13,6 +13,8 @@
     <string name="description">Description</string>
     <string name="amount">Amount</string>
 
+    <string name="kitchen">Kitchen</string>
+    <string name="finished">Order Done</string>
 
     <string name="okay_dish"></string>
     <string name="title_activity_menu">Menu</string>

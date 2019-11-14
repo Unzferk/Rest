@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.models.OrderDish;
+import com.example.models.OrderM;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ public class AdapterOrderDetails extends RecyclerView.Adapter<AdapterOrderDetail
 
 
     List<OrderDish> orderDishes;
+    OrderM ordM;
 
     public AdapterOrderDetails(List<OrderDish> orderDishes) {
         this.orderDishes = orderDishes;

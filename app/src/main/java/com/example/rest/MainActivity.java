@@ -9,7 +9,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button menu,order,option;
+    Button menu,order,kitchen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +27,10 @@ public class MainActivity extends AppCompatActivity {
         Intent orderQueue=new Intent(this,OrderQueue.class);
         startActivity(orderQueue);
     }
+    public void Kitchen(View view){
+        Intent kitchen=new Intent(this,Kitchen.class);
+        startActivity(kitchen);
+    }
+
 }
 

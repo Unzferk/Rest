@@ -24,8 +24,8 @@ import java.util.List;
 public class OrderQueue extends AppCompatActivity {
 
     //Attributes
-    RecyclerView rv_OrderQueue;
     List<OrderM> orders;
+    RecyclerView rv_OrderQueue;
     AdapterOrderQueue adapter;
 
 
@@ -74,11 +74,7 @@ public class OrderQueue extends AppCompatActivity {
             }
         });
 
-
-
-
     }
-
 
     public void newOrder(){
         Intent newOrder=new Intent(this,Order.class);

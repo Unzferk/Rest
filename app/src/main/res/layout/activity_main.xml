@@ -17,11 +17,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btn_options"
+            android:id="@+id/btn_kitchen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_option"
-            />
+            android:onClick="Kitchen"
+            android:text="@string/kitchen" />
 
         <Button
             android:id="@+id/btn_order"

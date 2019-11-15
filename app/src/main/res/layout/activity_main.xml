@@ -22,6 +22,8 @@
             android:layout_height="wrap_content"
             android:onClick="Kitchen"
             android:text="@string/kitchen" />
+            android:text="@string/btn_option"
+            />
 
         <Button
             android:id="@+id/btn_order"

@@ -55,7 +55,7 @@
         <EditText
             android:id="@+id/input_dish_desc"
             android:layout_width="match_parent"
-            android:layout_height="452dp"
+            android:layout_height="436dp"
             android:ems="10"
             android:gravity="top|start"
             android:hint="@string/empty"

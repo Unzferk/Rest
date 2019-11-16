@@ -10,33 +10,51 @@
         android:id="@+id/menu_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorfondo"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/btn_kitchen"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/style_btns"
             android:onClick="Kitchen"
-            android:text="@string/kitchen" />
-            android:text="@string/btn_option"
-            />
+            android:text="@string/kitchen"
+            android:textSize="24sp"
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/btn_order"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/style_btns"
             android:onClick="orderQueue"
-            android:text="@string/btn_order" />
+            android:text="@string/btn_order"
+            android:textSize="24sp"
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/btn_menu"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/style_btns"
+            android:gravity="center"
             android:onClick="menu"
-            android:text="@string/btn_menu" />
+            android:text="@string/btn_menu"
+            android:textSize="24sp"
+            android:textStyle="normal" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

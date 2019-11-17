@@ -83,9 +83,7 @@ public class Order extends AppCompatActivity {
         String aux= nroTable.getText().toString();
         int id=item.getItemId();
         if((!aux.isEmpty()) && id==R.id.btn_okay){
-            //nroTable=(EditText) findViewById(R.id.input_noTable);
 
-            //String aux= nroTable.getText().toString();
             int nro=Integer.parseInt(aux);
             if(!selectedDishes.isEmpty()) {
                 OrderM ord=new OrderM(nro,selectedDishes);

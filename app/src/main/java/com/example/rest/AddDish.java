@@ -38,11 +38,18 @@ public class AddDish extends AppCompatActivity {
             name=(EditText) findViewById(R.id.input_dish_name);
             price =(EditText) findViewById(R.id.input_dish_price);
             desc=(EditText) findViewById(R.id.input_dish_desc);
-            String aux=price.getText().toString();
-            int p=Integer.parseInt(aux);
-            Food food=new Food(name.getText().toString(),desc.getText().toString(),p);
-            databaseReference.child("food").child(name.getText().toString()).setValue(food);
-            Toast.makeText(AddDish.this,"data Inserted",Toast.LENGTH_SHORT).show();
+            String nameS = name.getText().toString();
+            String priceS = price.getText().toString();
+            String descS = desc.getText().toString();
+            if(nameS.isEmpty() || priceS.isEmpty() || descS.isEmpty()){
+                Toast.makeText(AddDish.this,"some field is missing",Toast.LENGTH_SHORT).show();
+            }else{
+                String aux=price.getText().toString();
+                int p=Integer.parseInt(aux);
+                Food food=new Food(name.getText().toString(),desc.getText().toString(),p);
+                databaseReference.child("food").child(name.getText().toString()).setValue(food);
+                Toast.makeText(AddDish.this,"data Inserted",Toast.LENGTH_SHORT).show();
+            }
         }
         return true;
     }

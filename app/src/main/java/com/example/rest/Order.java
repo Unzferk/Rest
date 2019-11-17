@@ -79,20 +79,26 @@ public class Order extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
-
+        nroTable=(EditText) findViewById(R.id.input_noTable);
+        String aux= nroTable.getText().toString();
         int id=item.getItemId();
-        if(id==R.id.btn_okay){
-            nroTable=(EditText) findViewById(R.id.input_noTable);
+        if((!aux.isEmpty()) && id==R.id.btn_okay){
+            //nroTable=(EditText) findViewById(R.id.input_noTable);
 
-            String aux= nroTable.getText().toString();
+            //String aux= nroTable.getText().toString();
             int nro=Integer.parseInt(aux);
+            if(!selectedDishes.isEmpty()) {
+                OrderM ord=new OrderM(nro,selectedDishes);
 
-            OrderM ord=new OrderM(nro,selectedDishes);
-            DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference();
-            databaseReference.child("order").push().setValue(ord);
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+                databaseReference.child("order").push().setValue(ord);
 
-
-            Toast.makeText(Order.this,"Order created!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Order.this, "Order created!!", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(Order.this, "Your order is missing", Toast.LENGTH_SHORT).show();
+            }
+        }else if(aux.isEmpty() && id==R.id.btn_okay){
+            Toast.makeText(Order.this,"Enter the table number",Toast.LENGTH_SHORT).show();
         }
         return true;
     }

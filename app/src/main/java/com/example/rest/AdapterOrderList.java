@@ -68,7 +68,14 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
                             }
                         }
                     }else{((CheckBox)v).setChecked(false);}
-                }else{((CheckBox)v).setChecked(false);}
+                }else{
+                    if(((CheckBox) v).isChecked()){
+                        dishes.add(new OrderDish(food.getName(),food.getPrice(),1));
+                        holder.amount.setText("1");
+                        holder.amount.setEnabled(!((CheckBox) v).isChecked());
+                    }
+                    //((CheckBox)v).setChecked(false);
+                }
 
             }
         });

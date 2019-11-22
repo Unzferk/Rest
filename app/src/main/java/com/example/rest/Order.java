@@ -86,10 +86,14 @@ public class Order extends AppCompatActivity {
 
             int nro=Integer.parseInt(aux);
             if(!selectedDishes.isEmpty()) {
-                OrderM ord=new OrderM(nro,selectedDishes);
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("order");
+                String idAux=databaseReference.push().getKey();
+                OrderM ord=new OrderM(idAux,nro,selectedDishes);
+                databaseReference.child(idAux).setValue(ord);
+                /*OrderM ord=new OrderM(nro,selectedDishes);
 
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-                databaseReference.child("order").push().setValue(ord);
+                databaseReference.child("order").push().setValue(ord);*/
 
                 Toast.makeText(Order.this, "Order created!!", Toast.LENGTH_SHORT).show();
             }else{

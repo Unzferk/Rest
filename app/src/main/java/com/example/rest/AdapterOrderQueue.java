@@ -2,6 +2,7 @@ package com.example.rest;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,8 +44,7 @@ public class AdapterOrderQueue extends RecyclerView.Adapter<AdapterOrderQueue.Or
         holder.nroTable.setText("Table-"+aux);
         aux=order.getTotal()+"";
         holder.totalPrice.setText(aux);
-
-
+        holder.orderDone();
     }
 
     @Override
@@ -56,11 +56,11 @@ public class AdapterOrderQueue extends RecyclerView.Adapter<AdapterOrderQueue.Or
 
         TextView nroTable, totalPrice;
 
-
         public OrderQueueViewHolder(@NonNull View itemView) {
             super(itemView);
             nroTable =itemView.findViewById(R.id.nroTableQueueRow);
             totalPrice =itemView.findViewById(R.id.totalQueOrderRow);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -70,6 +70,13 @@ public class AdapterOrderQueue extends RecyclerView.Adapter<AdapterOrderQueue.Or
                     v.getContext().startActivity(i);
                 }
             });
+        }
+        public void orderDone(){
+            if(queueOrder.get(getAdapterPosition()).isDone()){
+                itemView.setBackgroundColor(Color.GREEN);
+            }else {
+                itemView.setBackgroundColor(Color.RED);
+            }
         }
     }
 

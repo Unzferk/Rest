@@ -5,15 +5,27 @@ import java.util.List;
 
 public class OrderM implements Serializable {
 
+    private String id;
     private int nroTable;
     private List<OrderDish> orders;
+    private boolean done;
 
-    public OrderM(int nroTable, List<OrderDish> orders) {
+    public OrderM(String id,int nroTable, List<OrderDish> orders) {
+        this.id = id;
         this.nroTable = nroTable;
         this.orders = orders;
+        this.done = false;
     }
 
     public OrderM() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public int getNroTable() {
@@ -30,6 +42,14 @@ public class OrderM implements Serializable {
 
     public void setOrders(List<OrderDish> orders) {
         this.orders = orders;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
 
     public int getTotal(){

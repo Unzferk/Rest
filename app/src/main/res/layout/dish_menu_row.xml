@@ -4,7 +4,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorfondo"
+
     android:orientation="vertical">
 
 
@@ -12,7 +12,10 @@
         android:id="@+id/dishNameOrderRow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="42sp" />
+        android:textSize="@dimen/elemOrden"
+        android:layout_marginTop="@dimen/bordeext"
+        android:layout_marginStart="@dimen/bordelat"
+        android:layout_marginEnd="@dimen/bordelat"/>
 
 
 </FrameLayout>

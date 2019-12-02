@@ -1,22 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/bordelat"
+    android:layout_marginTop="@dimen/bordeext"
+    android:layout_marginEnd="@dimen/bordelat">
 
-    <TextView
-        android:id="@+id/nroTableQueueRow"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:text="@string/nroMesa"
-        android:textSize="42sp" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/totalQueOrderRow"
-        android:layout_width="133dp"
-        android:layout_height="wrap_content"
-        android:textSize="42sp"
-        tools:text="@string/number" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Orden"
+            android:textSize="@dimen/titulo"
+            android:textStyle="bold"/>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="# Mesa"
+            android:textSize="@dimen/titulo"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorItem">
+
+            <TextView
+                android:id="@+id/nroTableQueueRow"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="@string/nroMesa"
+                android:textSize="@dimen/elemOrden" />
+
+            <TextView
+                android:id="@+id/totalQueOrderRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/elemOrden"
+                tools:text="@string/number" />
+
+    </TableRow>
+</TableLayout>

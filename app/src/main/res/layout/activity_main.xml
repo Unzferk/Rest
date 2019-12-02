@@ -10,7 +10,7 @@
         android:id="@+id/menu_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorfondo"
+        android:background="@drawable/fondo"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

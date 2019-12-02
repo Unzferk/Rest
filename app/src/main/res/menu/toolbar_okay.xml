@@ -2,9 +2,10 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
         android:id="@+id/btn_okay"
-        android:icon="@android:drawable/ic_input_add"
+        android:icon="@drawable/ic_icon_menu"
         android:title="@string/okay_dish"
         app:showAsAction="always"
         />

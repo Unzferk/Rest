@@ -20,5 +20,8 @@
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_order_list">OrderList</string>
 
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+
 
 </resources>

@@ -1,8 +1,10 @@
 package com.example.rest;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,6 +37,7 @@ public class AdapterDishList extends RecyclerView.Adapter<AdapterDishList.DishLi
     public void onBindViewHolder(@NonNull DishListViewHolder holder, int position) {
         Food food=foods.get(position);
         holder.dishName.setText(food.getName());
+        holder.dishDesc.setText(food.getDescription());
 
     }
 
@@ -46,11 +49,22 @@ public class AdapterDishList extends RecyclerView.Adapter<AdapterDishList.DishLi
 
     class DishListViewHolder extends RecyclerView.ViewHolder {
 
-        TextView dishName;
+        TextView dishName,dishDesc;
+        Button dishDelete;
 
         public DishListViewHolder(@NonNull View itemView) {
             super(itemView);
             dishName=itemView.findViewById(R.id.dishNameOrderRow);
+            dishDesc=itemView.findViewById(R.id.tv_dish_desc);
+            dishDelete=itemView.findViewWithTag(R.id.btn_delete);
+           itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(v.getContext(),DishDetails.class);
+                    i.putExtra("obj",foods.get(getAdapterPosition()));
+                    v.getContext().startActivity(i);
+                }
+            });
 
         }
     }

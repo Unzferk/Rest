@@ -18,6 +18,8 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:background="@drawable/style_btns"
+            android:textSize="@dimen/letraBoton"
+            android:textStyle="normal"
             android:text="@string/finished" />
 
         <FrameLayout

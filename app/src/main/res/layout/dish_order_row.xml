@@ -29,14 +29,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/name"
-                    android:textSize="@dimen/tamCont" />
+                    android:textSize="@dimen/elemOrden" />
 
                 <TextView
                     android:id="@+id/dishPriceOrderRow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/price"
-                    android:textSize="@dimen/tamCont" />
+                    android:textSize="@dimen/elemOrden" />
             </LinearLayout>
 
             <CheckBox
@@ -57,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/amount"
-                    android:textSize="@dimen/tamCont"/>
+                    android:textSize="@dimen/elemOrden"/>
 
                 <EditText
                     android:id="@+id/et_amount"

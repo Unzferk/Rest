@@ -1,58 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/bordelat"
+    android:layout_marginTop="@dimen/bordeext"
+    android:layout_marginEnd="@dimen/bordelat"
+    android:layout_gravity="center_horizontal"
+    >
+
+    <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/bordelat"
-        android:layout_marginTop="@dimen/bordeext"
-        android:layout_marginEnd="@dimen/bordelat"
-        >
+        android:layout_height="match_parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="205dp"
-                android:layout_height="match_parent"
-                android:text="Nombre"
-                android:textSize="@dimen/titulo"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="182dp"
-                android:layout_height="wrap_content"
-                android:text="Monto"
-                android:textSize="@dimen/titulo"
-                android:textStyle="bold"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:background="@color/colorItem">
+            android:text="Name"
+            android:textAlignment="center"
+            android:textSize="@dimen/titulo"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/k_det_name"
-                    android:layout_width="219dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/name"
-                    android:textSize="@dimen/tamCont" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Amount"
+            android:textAlignment="center"
+            android:textSize="@dimen/titulo"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/k_det_amount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/amount"
-                    android:textSize="@dimen/tamCont" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorItem">
+
+        <TextView
+            android:id="@+id/k_det_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/name"
+            android:textSize="@dimen/elemOrden" />
+
+        <TextView
+            android:id="@+id/k_det_amount"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/amount"
+            android:textSize="@dimen/elemOrden" />
 
 
-        </TableRow>
+    </TableRow>
 
 </TableLayout>

@@ -3,6 +3,8 @@
     <dimen name="bordelat">10dp</dimen>
     <dimen name="bordeext">5dp</dimen>
     <dimen name="titulo">20sp</dimen>
-    <dimen name="tamCont">15sp</dimen>
     <dimen name="elemOrden">18sp</dimen>
+    <dimen name="titOrden">15sp</dimen>
+    <dimen name="radioBorde">300dp</dimen>
+    <dimen name="letraBoton">24sp</dimen>
 </resources>

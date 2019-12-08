@@ -29,7 +29,7 @@
             android:background="@drawable/style_btns"
             android:onClick="Kitchen"
             android:text="@string/kitchen"
-            android:textSize="24sp"
+            android:textSize="@dimen/letraBoton"
             android:textStyle="normal" />
 
         <Button
@@ -41,7 +41,7 @@
             android:background="@drawable/style_btns"
             android:onClick="orderQueue"
             android:text="@string/btn_order"
-            android:textSize="24sp"
+            android:textSize="@dimen/letraBoton"
             android:textStyle="normal" />
 
         <Button
@@ -54,7 +54,7 @@
             android:gravity="center"
             android:onClick="menu"
             android:text="@string/btn_menu"
-            android:textSize="24sp"
+            android:textSize="@dimen/letraBoton"
             android:textStyle="normal" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

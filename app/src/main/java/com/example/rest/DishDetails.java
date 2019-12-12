@@ -54,7 +54,6 @@ public class DishDetails extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void update(String key,String desc,int mon){

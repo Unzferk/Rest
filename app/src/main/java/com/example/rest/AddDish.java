@@ -49,6 +49,9 @@ public class AddDish extends AppCompatActivity {
                 Food food=new Food(name.getText().toString(),desc.getText().toString(),p);
                 databaseReference.child("food").child(name.getText().toString()).setValue(food);
                 Toast.makeText(AddDish.this,"data Inserted",Toast.LENGTH_SHORT).show();
+                name.setText("");
+                price.setText("");
+                desc.setText("");
             }
         }
         return true;

@@ -42,8 +42,6 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
         holder.dishPrice.setText(auxPrice);
         holder.flag.setChecked(false);
 
-
-
         holder.flag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,35 +50,32 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
                     int amon = Integer.parseInt(auxS);
                     if(amon>0){
                         if(((CheckBox) v).isChecked()){
-                        //cantidad de platos, revisar... deberia ser minimo 1
-                        OrderDish aux=new OrderDish(food.getName(),food.getPrice(),amon);
-                        dishes.add(aux);
-                        holder.amount.setEnabled(!((CheckBox) v).isChecked());
-                        System.out.println("Plato añadido :V");
+                            //cantidad de platos, revisar... deberia ser minimo 1
+                            OrderDish aux=new OrderDish(food.getName(),food.getPrice(),amon);
+                            dishes.add(aux);
+                            holder.amount.setEnabled(!((CheckBox) v).isChecked());
+                            System.out.println("Plato añadido :V");
                         }else{
                             holder.amount.setEnabled(!((CheckBox) v).isChecked());
                             holder.amount.setText("");
                             for(int i=0;i<dishes.size();i++){
                                 if(dishes.get(i).getName().equals(food.getName())){
-                                dishes.remove(i);
-                                System.out.println("plato removido");
+                                    dishes.remove(i);
+                                    System.out.println("plato removido");
                                 }
                             }
                         }
                     }else{((CheckBox)v).setChecked(false);}
                 }else{
-                    if(((CheckBox) v).isChecked()){
-                        dishes.add(new OrderDish(food.getName(),food.getPrice(),1));
+                    if (((CheckBox) v).isChecked()) {
                         holder.amount.setText("1");
-                        holder.amount.setEnabled(!((CheckBox) v).isChecked());
+                        onClick(v);
                     }
-                    //((CheckBox)v).setChecked(false);
                 }
-
             }
         });
 
-    }
+}
 
     @Override
     public int getItemCount() {

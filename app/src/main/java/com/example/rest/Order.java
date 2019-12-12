@@ -96,6 +96,7 @@ public class Order extends AppCompatActivity {
                 databaseReference.child("order").push().setValue(ord);*/
 
                 Toast.makeText(Order.this, "Order created!!", Toast.LENGTH_SHORT).show();
+                finish();
             }else{
                 Toast.makeText(Order.this, "Your order is missing", Toast.LENGTH_SHORT).show();
             }

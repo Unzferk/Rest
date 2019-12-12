@@ -63,10 +63,12 @@ public class DishDetails extends AppCompatActivity {
         Food food=new Food(key,desc,mon);
         databaseReference.setValue(food);
         Toast.makeText(DishDetails.this,"Updated",Toast.LENGTH_SHORT).show();
+        finish();
     }
     private void delete(String key){
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference("food").child(key);
         databaseReference.removeValue();
-
+        Toast.makeText(DishDetails.this,"Deleted",Toast.LENGTH_SHORT).show();
+        finish();
     }
 }

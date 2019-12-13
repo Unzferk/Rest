@@ -33,13 +33,18 @@ public class KitchenOrderDetail extends AppCompatActivity {
 
 
         orderDone=findViewById(R.id.btn_finished);
-        orderDone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                isDone();
-                Toast.makeText(KitchenOrderDetail.this, "Order is ready!!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        if(ordM.isDone()){
+            orderDone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    isDone();
+                    Toast.makeText(KitchenOrderDetail.this, "Order is ready!!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }else {
+            orderDone.setEnabled(false);
+        }
+
 
         rv_orderDetails=findViewById(R.id.rv_kit_ord_cont);
         rv_orderDetails.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL ));

@@ -1,12 +1,14 @@
 package com.example.rest;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.models.OrderM;
@@ -34,6 +36,7 @@ public class AdapterKitchenQueue extends RecyclerView.Adapter<AdapterKitchenQueu
     public void onBindViewHolder(@NonNull KitchenQueueViewHolder holder, int position) {
         OrderM order=orders.get(position);
         holder.nroTable.setText("Table - "+order.getNroTable());
+        holder.orderDone();
     }
 
     @Override
@@ -56,6 +59,13 @@ public class AdapterKitchenQueue extends RecyclerView.Adapter<AdapterKitchenQueu
                     v.getContext().startActivity(i);
                 }
             });
+        }
+        public void orderDone(){
+            if(orders.get(getAdapterPosition()).isDone()){
+                itemView.setBackgroundColor(Color.rgb(250, 212, 212));
+            }else {
+                itemView.setBackgroundColor(Color.rgb(212, 250, 229));
+            }
         }
     }
 }

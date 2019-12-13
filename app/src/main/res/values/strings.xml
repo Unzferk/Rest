@@ -22,6 +22,7 @@
 
     <string name="delete">Delete</string>
     <string name="update">Update</string>
+    <string name="orderCompleted">Order Completed</string>
 
 
 </resources>

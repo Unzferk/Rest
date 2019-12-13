@@ -13,6 +13,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btn_order_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/orderCompleted" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

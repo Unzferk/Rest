@@ -42,7 +42,47 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
         holder.dishPrice.setText(auxPrice);
         holder.flag.setChecked(false);
 
+        for(int i=0;i<dishes.size();i++){
+            if(dishes.get(i).getName().equals(food.getName())){
+                holder.flag.setChecked(true);
+            }
+        }
+
         holder.flag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(((CheckBox) v).isChecked()){
+                    String str_amount = holder.amount.getText().toString();
+                    if((!str_amount.isEmpty())){
+                        int amon = Integer.parseInt(str_amount);
+                        OrderDish aux=new OrderDish(food.getName(),food.getPrice(),amon);
+                        dishes.add(aux);
+                        holder.amount.setEnabled(!((CheckBox) v).isChecked());
+                        System.out.println("Plato añadido :V");
+                    }else{
+                        holder.amount.setText("1");
+                        OrderDish aux=new OrderDish(food.getName(),food.getPrice(),1);
+                        dishes.add(aux);
+                        holder.amount.setEnabled(!((CheckBox) v).isChecked());
+                        System.out.println("Plato añadido :V");
+                    }
+                }else{
+                    holder.amount.setEnabled(!((CheckBox) v).isChecked());
+                    holder.amount.setText("");
+                    for(int i=0;i<dishes.size();i++){
+                        if(dishes.get(i).getName().equals(food.getName())){
+                            dishes.remove(i);
+                            System.out.println("plato removido");
+                        }
+                    }
+                }
+            }
+        });
+
+
+        //OLD VERSION (CHECK BUG)
+       /* holder.flag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String auxS = holder.amount.getText().toString();
@@ -73,7 +113,7 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
                     }
                 }
             }
-        });
+        });*/
 
 }
 
@@ -81,7 +121,6 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
     public int getItemCount() {
         return foods.size();
     }
-
 
     class OrderListViewHolder extends RecyclerView.ViewHolder{
 

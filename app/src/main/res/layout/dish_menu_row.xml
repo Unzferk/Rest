@@ -22,11 +22,6 @@
             android:layout_marginEnd="@dimen/bordelat"
             android:textSize="@dimen/elemOrden" />
 
-        <Button
-            android:id="@+id/btn_delete"
-            android:layout_width="53dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/style_btns"/>
     </LinearLayout>
 
     <FrameLayout

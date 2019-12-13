@@ -50,13 +50,11 @@ public class AdapterDishList extends RecyclerView.Adapter<AdapterDishList.DishLi
     class DishListViewHolder extends RecyclerView.ViewHolder {
 
         TextView dishName,dishDesc;
-        Button dishDelete;
 
         public DishListViewHolder(@NonNull View itemView) {
             super(itemView);
             dishName=itemView.findViewById(R.id.dishNameOrderRow);
             dishDesc=itemView.findViewById(R.id.tv_dish_desc);
-            dishDelete=itemView.findViewWithTag(R.id.btn_delete);
            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

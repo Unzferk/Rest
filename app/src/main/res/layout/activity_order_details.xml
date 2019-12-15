@@ -31,13 +31,19 @@
                 android:id="@+id/ord_det_nroTable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="@dimen/elemOrden"
+                android:textAlignment="center"/>
 
             <TextView
                 android:id="@+id/ord_det_total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="@dimen/elemOrden"
+                android:textAlignment="center"/>
         </LinearLayout>
 
         <FrameLayout

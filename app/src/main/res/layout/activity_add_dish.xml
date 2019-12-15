@@ -68,7 +68,11 @@
             android:gravity="top|start"
             android:hint="@string/empty"
             android:importantForAutofill="no"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_marginStart="@dimen/bordelat"
+            android:layout_marginEnd="@dimen/bordelat"
+            android:layout_marginTop="@dimen/bordeext"
+            android:singleLine="false"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

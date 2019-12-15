@@ -20,7 +20,8 @@
             android:layout_marginStart="@dimen/bordelat"
             android:layout_marginTop="@dimen/bordeext"
             android:layout_marginEnd="@dimen/bordelat"
-            android:textSize="@dimen/elemOrden" />
+            android:textSize="@dimen/elemOrden"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 

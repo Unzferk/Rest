@@ -25,7 +25,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/order_dish_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/bordelat"
+            android:layout_marginEnd="@dimen/bordelat"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

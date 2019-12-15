@@ -29,7 +29,9 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_kit_ord_cont"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/bordelat"
+                android:layout_marginEnd="@dimen/bordelat"/>
         </FrameLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

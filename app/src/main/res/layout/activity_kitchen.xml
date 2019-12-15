@@ -10,5 +10,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/kitch_orderQueue"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/bordelat"
+        android:layout_marginEnd="@dimen/bordelat"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

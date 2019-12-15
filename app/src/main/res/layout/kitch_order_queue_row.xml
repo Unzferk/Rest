@@ -11,11 +11,11 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:text="List"
+        android:text="@string/Lista"
         android:textSize="@dimen/titulo"
         android:textStyle="bold" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

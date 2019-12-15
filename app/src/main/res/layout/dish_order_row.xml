@@ -7,8 +7,9 @@
     >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:layout_marginStart="@dimen/bordelat"
         android:layout_marginTop="@dimen/bordeext"
         android:layout_marginEnd="@dimen/bordelat"
@@ -16,11 +17,12 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="140dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -29,26 +31,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/name"
-                    android:textSize="@dimen/elemOrden" />
+                    android:textSize="@dimen/elemOrden"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/dishPriceOrderRow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/price"
-                    android:textSize="@dimen/elemOrden" />
+                    android:textSize="@dimen/elemOrden"
+                    android:textStyle="bold"/>
             </LinearLayout>
 
             <CheckBox
                 android:id="@+id/check_add"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="0.1"
-                android:gravity="center"
-                 />
+                android:drawableStart="@color/colorBorder"
+                android:drawableTop="@color/colorBorder"
+                android:drawableEnd="@color/colorBorder"
+                android:drawableBottom="@color/colorBorder"
+                android:gravity="center" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -57,11 +64,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/amount"
-                    android:textSize="@dimen/elemOrden"/>
+                    android:textSize="@dimen/elemOrden"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/et_amount"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/empty"

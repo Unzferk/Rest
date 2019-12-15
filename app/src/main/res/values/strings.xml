@@ -24,5 +24,12 @@
     <string name="update">Update</string>
     <string name="orderCompleted">Order Completed</string>
 
+    <string name="Pedido">Order</string>
+    <string name="Mesa">#Table</string>
+    <string name="Nombre">Name</string>
+    <string name="Monto">Amount</string>
+    <string name="Lista">List</string>
+    <string name="precioUnidad">U.P.</string>
+    <string name="precioTotal">T.P.</string>
 
 </resources>

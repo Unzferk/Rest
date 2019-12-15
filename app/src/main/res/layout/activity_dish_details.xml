@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/titulo"
-            android:textStyle="normal"
+            android:textStyle="bold"
             android:text="@string/name" />
 
         <EditText
@@ -66,8 +66,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/titulo"
-            android:textStyle="normal"
-            android:text="@string/price" />
+            android:textStyle="bold"
+            android:text="@string/price"
+            />
 
         <EditText
             android:id="@+id/et_dish_price"
@@ -83,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/titulo"
-            android:textStyle="normal"
+            android:textStyle="bold"
             android:text="@string/description" />
 
         <EditText

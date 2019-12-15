@@ -22,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/titulo"
-            android:text="@string/name" />
+            android:text="@string/name"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/input_dish_name"
@@ -31,14 +32,16 @@
             android:ems="10"
             android:hint="@string/empty"
             android:importantForAutofill="no"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/txt_dish_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/titulo"
-            android:text="@string/price" />
+            android:text="@string/price"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/input_dish_price"
@@ -54,7 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/titulo"
-            android:text="@string/description" />
+            android:text="@string/description"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/input_dish_desc"

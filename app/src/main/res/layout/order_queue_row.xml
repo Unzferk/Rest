@@ -1,55 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/bordelat"
     android:layout_marginTop="@dimen/bordeext"
     android:layout_marginEnd="@dimen/bordelat"
-    android:layout_gravity="center_horizontal"
+    android:layout_gravity="center"
     >
 
-    <TableRow
-        android:layout_width="fill_parent"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:layout_gravity="center_horizontal">
 
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:text="Order"
-            android:textAlignment="center"
-            android:textSize="@dimen/titulo"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="# Table"
-            android:textAlignment="center"
-            android:textSize="@dimen/titulo"
-            android:textStyle="bold" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorItem">
-
-        <TextView
-            android:id="@+id/nroTableQueueRow"
-            android:layout_width="200dp"
+        <TableRow
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="@string/nroMesa"
-            android:textSize="@dimen/elemOrden" />
 
-        <TextView
-            android:id="@+id/totalQueOrderRow"
-            android:layout_width="100dp"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Pedido"
+                android:textAlignment="center"
+                android:textSize="@dimen/titulo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Mesa"
+                android:textAlignment="center"
+                android:textSize="@dimen/titulo"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/elemOrden"
-            tools:text="@string/number" />
+            android:background="@color/colorItem">
 
-    </TableRow>
-</TableLayout>
+            <TextView
+                android:id="@+id/nroTableQueueRow"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/nroMesa"
+                android:textSize="@dimen/elemOrden" />
+
+            <TextView
+                android:id="@+id/totalQueOrderRow"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/elemOrden"
+                tools:text="@string/number" />
+
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

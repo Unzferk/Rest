@@ -33,7 +33,7 @@ public class KitchenOrderDetail extends AppCompatActivity {
 
 
         orderDone=findViewById(R.id.btn_finished);
-        if(ordM.isDone()){
+        if(!ordM.isDone()){
             orderDone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

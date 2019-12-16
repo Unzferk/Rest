@@ -43,16 +43,22 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/check_add"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="0.1"
-                android:drawableStart="@color/colorBorder"
-                android:drawableTop="@color/colorBorder"
-                android:drawableEnd="@color/colorBorder"
-                android:drawableBottom="@color/colorBorder"
-                android:gravity="center" />
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_add"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:drawableStart="@color/colorBorder"
+                    android:drawableTop="@color/colorBorder"
+                    android:drawableEnd="@color/colorBorder"
+                    android:drawableBottom="@color/colorBorder"
+                    android:gravity="center" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="150dp"

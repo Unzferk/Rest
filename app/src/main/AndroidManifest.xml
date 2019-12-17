@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DishDetails"></activity>
-        <activity android:name=".KitchenOrderDetail" />
-        <activity android:name=".Kitchen" />
-        <activity android:name=".OrderDetails" />
-        <activity android:name=".Order" />
+        <activity android:name=".menuactivities.DishDetails"></activity>
+        <activity android:name=".kitchenActivities.KitchenOrderDetail" />
+        <activity android:name=".kitchenActivities.Kitchen" />
+        <activity android:name=".orderactivities.OrderDetails" />
+        <activity android:name=".orderactivities.Order" />
         <activity
-            android:name=".OrderQueue"
+            android:name=".orderactivities.OrderQueue"
             android:label="@string/title_activity_order_list"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddDish" />
+        <activity android:name=".menuactivities.AddDish" />
         <activity
-            android:name=".Menu"
+            android:name=".menuactivities.Menu"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">

@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.orderactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -12,8 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.models.OrderDish;
-import com.example.models.OrderM;
+import com.example.models.OrderList;
+import com.example.rest.R;
+import com.example.rest.adapters.AdapterOrderDetails;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -25,7 +26,7 @@ public class OrderDetails extends AppCompatActivity {
     AdapterOrderDetails adapter;
     Button completed;
 
-    OrderM ordM;
+    OrderList ordM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class OrderDetails extends AppCompatActivity {
 
 
         Intent i=getIntent();
-        ordM=(OrderM) i.getSerializableExtra("obj");
+        ordM=(OrderList) i.getSerializableExtra("obj");
 
         completed=findViewById(R.id.btn_order_complete);
         nroTable=findViewById(R.id.ord_det_nroTable);

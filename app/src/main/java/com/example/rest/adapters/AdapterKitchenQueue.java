@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.adapters;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,25 +8,26 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.models.OrderM;
+import com.example.models.OrderList;
+import com.example.rest.kitchenActivities.KitchenOrderDetail;
+import com.example.rest.R;
 
 import java.util.List;
 
 public class AdapterKitchenQueue extends RecyclerView.Adapter<AdapterKitchenQueue.KitchenQueueViewHolder> {
 
-    List<OrderM> orders;
+    List<OrderList> orders;
 
-    public AdapterKitchenQueue(List<OrderM> orders) {
+    public AdapterKitchenQueue(List<OrderList> orders) {
         this.orders = orders;
     }
 
     @NonNull
     @Override
     public KitchenQueueViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        int viewKitchenQueueRow=R.layout.kitch_order_queue_row;
+        int viewKitchenQueueRow= R.layout.kitch_order_queue_row;
         View aux= LayoutInflater.from(parent.getContext()).inflate(viewKitchenQueueRow,parent,false);
         KitchenQueueViewHolder holder=new KitchenQueueViewHolder(aux);
         return holder;
@@ -34,7 +35,7 @@ public class AdapterKitchenQueue extends RecyclerView.Adapter<AdapterKitchenQueu
 
     @Override
     public void onBindViewHolder(@NonNull KitchenQueueViewHolder holder, int position) {
-        OrderM order=orders.get(position);
+        OrderList order=orders.get(position);
         holder.nroTable.setText("Table - "+order.getNroTable());
         holder.orderDone();
     }
@@ -54,7 +55,7 @@ public class AdapterKitchenQueue extends RecyclerView.Adapter<AdapterKitchenQueu
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(v.getContext(),KitchenOrderDetail.class);
+                    Intent i = new Intent(v.getContext(), KitchenOrderDetail.class);
                     i.putExtra("obj",orders.get(getAdapterPosition()));
                     v.getContext().startActivity(i);
                 }
@@ -62,9 +63,9 @@ public class AdapterKitchenQueue extends RecyclerView.Adapter<AdapterKitchenQueu
         }
         public void orderDone(){
             if(orders.get(getAdapterPosition()).isDone()){
-                itemView.setBackgroundColor(Color.rgb(250, 212, 212));
+                itemView.setBackgroundColor(Color.rgb(111, 252, 109));
             }else {
-                itemView.setBackgroundColor(Color.rgb(212, 250, 229));
+                itemView.setBackgroundColor(Color.rgb(255, 77, 64));
             }
         }
     }

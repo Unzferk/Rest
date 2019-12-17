@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DishDetails">
+    tools:context=".menuactivities.DishDetails">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -90,12 +90,14 @@
         <EditText
             android:id="@+id/et_dish_desc"
             android:layout_width="match_parent"
-            android:layout_height="436dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:ems="10"
             android:gravity="top|start"
             android:hint="@string/empty"
             android:importantForAutofill="no"
-            android:inputType="textPersonName" />
+            android:inputType="textMultiLine" />
 
     </LinearLayout>
 

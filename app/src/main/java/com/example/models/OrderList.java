@@ -3,21 +3,21 @@ package com.example.models;
 import java.io.Serializable;
 import java.util.List;
 
-public class OrderM implements Serializable {
+public class OrderList implements Serializable {
 
     private String id;
     private int nroTable;
     private List<OrderDish> orders;
     private boolean done;
 
-    public OrderM(String id,int nroTable, List<OrderDish> orders) {
+    public OrderList(String id, int nroTable, List<OrderDish> orders) {
         this.id = id;
         this.nroTable = nroTable;
         this.orders = orders;
         this.done = false;
     }
 
-    public OrderM() {
+    public OrderList() {
     }
 
     public String getId() {

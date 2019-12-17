@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.kitchenActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.models.OrderM;
+import com.example.models.OrderList;
+import com.example.rest.R;
+import com.example.rest.adapters.AdapterKitchOrdDetails;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -20,7 +22,7 @@ public class KitchenOrderDetail extends AppCompatActivity {
 
     RecyclerView rv_orderDetails;
     AdapterKitchOrdDetails adapter;
-    OrderM ordM;
+    OrderList ordM;
     Button orderDone;
 
     @Override
@@ -29,7 +31,7 @@ public class KitchenOrderDetail extends AppCompatActivity {
         setContentView(R.layout.activity_kitchen_order_detail);
 
         Intent i=getIntent();
-        ordM=(OrderM) i.getSerializableExtra("obj");
+        ordM=(OrderList) i.getSerializableExtra("obj");
 
 
         orderDone=findViewById(R.id.btn_finished);

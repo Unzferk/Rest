@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.adapters;
 
 
 import android.content.Intent;
@@ -13,8 +13,9 @@ import androidx.annotation.NonNull;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.models.OrderDish;
-import com.example.models.OrderM;
+import com.example.models.OrderList;
+import com.example.rest.orderactivities.OrderDetails;
+import com.example.rest.R;
 
 
 import java.util.List;
@@ -22,16 +23,16 @@ import java.util.List;
 public class AdapterOrderQueue extends RecyclerView.Adapter<AdapterOrderQueue.OrderQueueViewHolder> {
 
 
-    List<OrderM> queueOrder;
+    List<OrderList> queueOrder;
 
-    public AdapterOrderQueue(List<OrderM> queueOrder) {
+    public AdapterOrderQueue(List<OrderList> queueOrder) {
         this.queueOrder = queueOrder;
     }
 
     @NonNull
     @Override
     public OrderQueueViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        int viewOrderQueueRow=R.layout.order_queue_row;
+        int viewOrderQueueRow= R.layout.order_queue_row;
         View aux= LayoutInflater.from(parent.getContext()).inflate(viewOrderQueueRow,parent,false);
         OrderQueueViewHolder holder=new OrderQueueViewHolder(aux);
         return holder;
@@ -39,7 +40,7 @@ public class AdapterOrderQueue extends RecyclerView.Adapter<AdapterOrderQueue.Or
 
     @Override
     public void onBindViewHolder(@NonNull OrderQueueViewHolder holder, int position) {
-        OrderM order=queueOrder.get(position);
+        OrderList order=queueOrder.get(position);
         String aux=order.getNroTable()+"";
         holder.nroTable.setText("Table-"+aux);
         aux=order.getTotal()+"";
@@ -65,7 +66,7 @@ public class AdapterOrderQueue extends RecyclerView.Adapter<AdapterOrderQueue.Or
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(v.getContext(),OrderDetails.class);
+                    Intent i = new Intent(v.getContext(), OrderDetails.class);
                     i.putExtra("obj",queueOrder.get(getAdapterPosition()));
                     v.getContext().startActivity(i);
                 }
@@ -73,9 +74,9 @@ public class AdapterOrderQueue extends RecyclerView.Adapter<AdapterOrderQueue.Or
         }
         public void orderDone(){
             if(queueOrder.get(getAdapterPosition()).isDone()){
-                itemView.setBackgroundColor(Color.GREEN);
+                itemView.setBackgroundColor(Color.rgb(111, 252, 109));
             }else {
-                itemView.setBackgroundColor(Color.RED);
+                itemView.setBackgroundColor(Color.rgb(255, 77, 64));
             }
         }
     }

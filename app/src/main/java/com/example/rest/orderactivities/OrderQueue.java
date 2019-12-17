@@ -1,9 +1,11 @@
-package com.example.rest;
+package com.example.rest.orderactivities;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.models.OrderM;
+import com.example.models.OrderList;
+import com.example.rest.R;
+import com.example.rest.adapters.AdapterOrderQueue;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,7 +26,7 @@ import java.util.List;
 public class OrderQueue extends AppCompatActivity {
 
     //Attributes
-    List<OrderM> orders;
+    List<OrderList> orders;
     RecyclerView rv_OrderQueue;
     AdapterOrderQueue adapter;
 
@@ -61,7 +63,7 @@ public class OrderQueue extends AppCompatActivity {
                 orders.removeAll(orders);
                 for(DataSnapshot snapshot:dataSnapshot.getChildren()){
                     //no at the moment.
-                    OrderM aux=snapshot.getValue(OrderM.class);
+                    OrderList aux=snapshot.getValue(OrderList.class);
                     orders.add(aux);
 
                 }

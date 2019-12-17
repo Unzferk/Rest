@@ -1,8 +1,10 @@
-package com.example.rest;
+package com.example.rest.menuactivities;
 
 import android.os.Bundle;
 
 import com.example.models.Food;
+import com.example.rest.R;
+import com.example.rest.adapters.AdapterDishList;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

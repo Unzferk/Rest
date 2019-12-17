@@ -1,16 +1,17 @@
-package com.example.rest;
+package com.example.rest.adapters;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.models.Food;
+import com.example.rest.menuactivities.DishDetails;
+import com.example.rest.R;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class AdapterDishList extends RecyclerView.Adapter<AdapterDishList.DishLi
     @Override
     public DishListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        int viewListDishRow=R.layout.dish_menu_row;
+        int viewListDishRow= R.layout.dish_menu_row;
         View aux= LayoutInflater.from(parent.getContext()).inflate(viewListDishRow,parent,false);
         DishListViewHolder holder=new DishListViewHolder(aux);
         return holder;
@@ -58,7 +59,7 @@ public class AdapterDishList extends RecyclerView.Adapter<AdapterDishList.DishLi
            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(v.getContext(),DishDetails.class);
+                    Intent i = new Intent(v.getContext(), DishDetails.class);
                     i.putExtra("obj",foods.get(getAdapterPosition()));
                     v.getContext().startActivity(i);
                 }

@@ -22,11 +22,11 @@
 
         <Button
             android:id="@+id/btn_kitchen"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/style_btns"
+            android:background="@drawable/style_btns_menu"
             android:onClick="Kitchen"
             android:text="@string/kitchen"
             android:textSize="@dimen/letraBoton"
@@ -34,11 +34,11 @@
 
         <Button
             android:id="@+id/btn_order"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/style_btns"
+            android:background="@drawable/style_btns_menu"
             android:onClick="orderQueue"
             android:text="@string/btn_order"
             android:textSize="@dimen/letraBoton"
@@ -46,11 +46,11 @@
 
         <Button
             android:id="@+id/btn_menu"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/style_btns"
+            android:background="@drawable/style_btns_menu"
             android:gravity="center"
             android:onClick="menu"
             android:text="@string/btn_menu"

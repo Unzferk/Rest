@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.orderactivities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +14,9 @@ import android.widget.Toast;
 
 import com.example.models.Food;
 import com.example.models.OrderDish;
-import com.example.models.OrderM;
+import com.example.models.OrderList;
+import com.example.rest.R;
+import com.example.rest.adapters.AdapterOrderList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -88,7 +90,7 @@ public class Order extends AppCompatActivity {
             if(!selectedDishes.isEmpty()) {
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("order");
                 String idAux=databaseReference.push().getKey();
-                OrderM ord=new OrderM(idAux,nro,selectedDishes);
+                OrderList ord=new OrderList(idAux,nro,selectedDishes);
                 databaseReference.child(idAux).setValue(ord);
                 /*OrderM ord=new OrderM(nro,selectedDishes);
 

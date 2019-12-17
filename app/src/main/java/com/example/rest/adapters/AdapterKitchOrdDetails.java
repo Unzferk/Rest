@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.models.OrderDish;
+import com.example.rest.R;
 
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class AdapterKitchOrdDetails extends RecyclerView.Adapter<AdapterKitchOrd
     @NonNull
     @Override
     public KitchOrdDetailViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        int viewKitchOrderDetailRow=R.layout.kitch_order_detail_row;
+        int viewKitchOrderDetailRow= R.layout.kitch_order_detail_row;
         View aux= LayoutInflater.from(parent.getContext()).inflate(viewKitchOrderDetailRow,parent,false);
         KitchOrdDetailViewHolder holder=new KitchOrdDetailViewHolder(aux);
         return holder;

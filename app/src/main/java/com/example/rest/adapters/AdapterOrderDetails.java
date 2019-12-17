@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.models.OrderDish;
-import com.example.models.OrderM;
+import com.example.models.OrderList;
+import com.example.rest.R;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class AdapterOrderDetails extends RecyclerView.Adapter<AdapterOrderDetail
 
 
     List<OrderDish> orderDishes;
-    OrderM ordM;
+    OrderList ordM;
 
     public AdapterOrderDetails(List<OrderDish> orderDishes) {
         this.orderDishes = orderDishes;
@@ -26,7 +27,7 @@ public class AdapterOrderDetails extends RecyclerView.Adapter<AdapterOrderDetail
     @NonNull
     @Override
     public OrderDetailsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        int viewOrderDetailRow=R.layout.order_detail_row;
+        int viewOrderDetailRow= R.layout.order_detail_row;
         View aux= LayoutInflater.from(parent.getContext()).inflate(viewOrderDetailRow,parent,false);
         OrderDetailsViewHolder holder=new OrderDetailsViewHolder(aux);
         return holder;

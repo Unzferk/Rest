@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.models.Food;
 import com.example.models.OrderDish;
+import com.example.rest.R;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class AdapterOrderList extends RecyclerView.Adapter<AdapterOrderList.Orde
     @NonNull
     @Override
     public OrderListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        int viewOrderDishRow=R.layout.dish_order_row;
+        int viewOrderDishRow= R.layout.dish_order_row;
         View aux= LayoutInflater.from(parent.getContext()).inflate(viewOrderDishRow,parent,false);
         OrderListViewHolder holder=new OrderListViewHolder(aux);
         return holder;

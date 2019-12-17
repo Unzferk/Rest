@@ -40,8 +40,8 @@ public class OrderDetails extends AppCompatActivity {
         completed=findViewById(R.id.btn_order_complete);
         nroTable=findViewById(R.id.ord_det_nroTable);
         total=findViewById(R.id.ord_det_total);
-        nroTable.setText(""+ordM.getNroTable());
-        total.setText(""+ordM.getTotal());
+        nroTable.setText("Table: "+ordM.getNroTable());
+        total.setText("Total: "+ordM.getTotal());
 
         rv_orderDetails=findViewById(R.id.rv_order_det);
         rv_orderDetails.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL ));

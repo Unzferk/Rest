@@ -43,7 +43,7 @@ public class AdapterOrderQueue extends RecyclerView.Adapter<AdapterOrderQueue.Or
         OrderList order=queueOrder.get(position);
         String aux=order.getNroTable()+"";
         holder.nroTable.setText("Table-"+aux);
-        aux=order.getTotal()+"";
+        aux=order.getTotal()+" $";
         holder.totalPrice.setText(aux);
         holder.orderDone();
     }

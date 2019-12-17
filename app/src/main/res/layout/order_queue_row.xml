@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/Mesa"
+                android:text="@string/total"
                 android:textAlignment="center"
                 android:textSize="@dimen/titulo"
                 android:textStyle="bold" />

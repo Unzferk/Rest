@@ -33,4 +33,5 @@
     <string name="precioUnidad">U.P.</string>
     <string name="precioTotal">T.P.</string>
     <string name="letraFondo">Enter Nº Table</string>
+    <string name="total">Total</string>
 </resources>
